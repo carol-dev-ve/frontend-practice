@@ -21,6 +21,6 @@ export const fetchSentiment = async (text) => {
     return data;
   } catch (error) {
     console.log(error)
-    throw new Error(error.error);
+    throw new Error(error.message);
   }
 };
