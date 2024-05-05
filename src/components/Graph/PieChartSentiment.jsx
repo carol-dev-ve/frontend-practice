@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Pie } from "react-chartjs-2";
-const labels = ["Positive", "Negative", "Neutral"];
+import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from 'chart.js';
+import { Pie } from 'react-chartjs-2';
 
+ChartJS.register(ArcElement, Tooltip, Legend, Title);
+const labels = ["Positive", "Negative", "Neutral"];
 const options = {
   responsive: true,
   maintainAspectRatio:true, 
@@ -29,8 +31,9 @@ const PieChartSentiment = ({ data }) => {
     NEG: 0,
     NEU: 0,
   });
+
   useEffect(() => {
-    const filterData = data.reduce(
+    const filterData = data?.reduce(
       (acum, res) => ({
         ...acum,
         [res.label]: res.score,
@@ -39,9 +42,7 @@ const PieChartSentiment = ({ data }) => {
     );
     setDataForChart(filterData);
   }, [data]);
-  console.log("dataForChart", dataForChart);
-
-
+  
   return (
     <Pie
       data={{

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { Pie, Chart } from 'react-chartjs-2'
+import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from 'chart.js';
+import { Pie } from 'react-chartjs-2';
 
-
+ChartJS.register(ArcElement, Tooltip, Legend, Title);
 const PieChartEmotion = ({data}) => {
     const [dataForChart, setDataForChart] = useState({})
     useEffect(() => {
@@ -15,8 +16,7 @@ const PieChartEmotion = ({data}) => {
     
 
   return (
-    <Chart
-    type="pie"
+    <Pie
     data={{
         labels,
         datasets:[{
