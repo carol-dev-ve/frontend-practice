@@ -8,6 +8,8 @@ The project consists of a Register and Login fake component. To access the rest 
 Once logged in, there is a page where you can upload a CSV file. It should have a specific structure. Once it is loaded, it is displayed in a table. The last column has a graph icon button. If you click it and there are no external errors from the Hugging API, you should see two graphs, each with the corresponding data. 
 
 
+![Image](public/assets/imageReadme.png)
+
 
 ## Available Scripts
 
