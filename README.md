@@ -11,7 +11,7 @@ Once logged in, there is a page where you can upload a CSV file. It should have 
 ![Image](public/assets/imageReadme.png)
 
 It should be set the envs as the env.template. Please take into account that the env REACT_APP_MAX_NUMBER_FETCH is set to pass the limit for the free huggi api 
-
+There is a TOGGLE SHOW SUMMARY BUTTON. It will display two summary graphs with the average data. The number indicated in the environment variables will determine the slice of the CSV data taken
 
 
 ## Available Scripts
