@@ -2,6 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+The project consists of a Register and Login fake component. To access the rest of the project, you must log in. I have used a fake API [dummyjson.com/users](https://dummyjson.com/users). Please use the provided username and password , provided on the link indicated, to log in (e.g., username: atuny0, password: 9uQFF1Lh).
+
+Once logged in, there is a page where you can upload a CSV file. It should have a specific structure. Once it is loaded, it is displayed in a table. The last column has a graph icon button. If you click it and there are no external errors from the Hugging API, you should see two graphs, each with the corresponding data. 
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
