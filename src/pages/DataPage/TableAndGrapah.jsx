@@ -44,7 +44,7 @@ const TableAndGrapah = ({ data }) => {
   return (
     <>
       <div className="w-full">
-        <div className="mt-10">
+        <div className="mt-10 mb-5">
           <Typography style={{ fontWeight: "bold", marginBottom: 2 }}>
             Table CSV Load
           </Typography>
