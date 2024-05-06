@@ -26,8 +26,8 @@ const LoginForm = ({ onClose }) => {
     } 
     try{
       const {data} = await axios.post('https://dummyjson.com/auth/login', {
-          username: 'hbingley1',
-          password: 'CQutx25i8r',
+          username,
+          password,
           expiresInMins: 30, // optional, defaults to 60
       })
       console.log(data)
