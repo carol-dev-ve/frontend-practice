@@ -1,25 +1,9 @@
 import React from "react";
-import LoginForm from "../pages/Auth/LoginScreen";
 import LoadCSV from "../pages/LoadCSVPage/LoadCSV";
 import {BrowserRouter, createBrowserRouter , Route,  Routes } from 'react-router-dom';
 import ProtectedRoute from "./ProtectedRoute";
-import RegisterForm from "../pages/Auth/RegisterScreen";
-
-
-// const router = createBrowserRouter([
-//     {
-//       path: "/",
-//       element: <LoginForm/>
-//     },
-//     {
-//         path: "/register",
-//         element: <RegisterForm/>,
-//       },
-//       {
-//         path: "/data",
-//         element: <ProtectedRoute/>,
-//       },
-//   ]);
+import LoginForm from "../pages/auth/LoginScreen";
+import RegisterForm from "../pages/auth/RegisterScreen";
 
 function SimpleRouter() {
   return (
