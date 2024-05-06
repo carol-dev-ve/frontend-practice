@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { redirect, useNavigate } from "react-router-dom";
+import React, {  useState } from 'react';
+import {  useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 
 const RegisterForm = ({ onClose }) => {

@@ -1,7 +1,6 @@
 import React from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import { IconButton } from "@mui/material";
-import SentimentSatisfiedAltIcon from "@mui/icons-material/SentimentSatisfiedAlt";
 import LeaderboardIcon from '@mui/icons-material/Leaderboard';
 
 const TableDataCSV = ({ data, setTextQuery }) => {
