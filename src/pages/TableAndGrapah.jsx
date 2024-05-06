@@ -25,11 +25,11 @@ const TableAndGrapah = ({data}) => {
         <TableDataCSV data={data} setTextQuery={setTextQuery}/>
       </div>
 
-        <div class="flex flex-wrap min-h-50">
+        <div className="flex flex-wrap min-h-50">
         {/* <!-- Card 1 --> */}
-        <div class="w-full sm:w-1/2 p-4  min-h-50">
+        <div className="w-full sm:w-1/2 p-4  min-h-50">
           {/* <!-- Card content goes here --> */}
-          <div class="bg-white rounded-lg shadow-md p-6  min-h-50 w-full">
+          <div className="bg-white rounded-lg shadow-md p-6  min-h-50 w-full">
             {/* <!-- Card content --> */}
             {( sentimentData.data?.length> 0 )? 
             <>
@@ -39,12 +39,12 @@ const TableAndGrapah = ({data}) => {
             </>
             :   
             sentimentData.isLoading && 
-              <div class="w-full min-h-[200px]">
-              <div class="bg-gray-200 animate-pulse rounded-lg shadow-md p-6 min-h-[200px]">
-              <div class="h-4 w-1/2 bg-gray-300 rounded"><Typography>Loadind Data</Typography></div>
-              <div class="h-4 w-3/4 mb-4 bg-gray-300 rounded"></div>
-                <div class="h-4 w-3/4 mb-4 bg-gray-300 rounded"></div>
-                <div class="h-4 w-1/2 bg-gray-300 rounded"></div>
+              <div className="w-full min-h-[200px]">
+              <div className="bg-gray-200 animate-pulse rounded-lg shadow-md p-6 min-h-[200px]">
+              <div className="h-4 w-1/2 bg-gray-300 rounded"><Typography>Loadind Data</Typography></div>
+              <div className="h-4 w-3/4 mb-4 bg-gray-300 rounded"></div>
+                <div className="h-4 w-3/4 mb-4 bg-gray-300 rounded"></div>
+                <div className="h-4 w-1/2 bg-gray-300 rounded"></div>
               </div>
             </div>
             }

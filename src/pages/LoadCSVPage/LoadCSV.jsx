@@ -36,7 +36,7 @@ function LoadCSV() {
       <div className="w-[100%] pt-4 flex flex-col items-center justify-center">
         <h1 className="font-bold text-[#1f2937]">Load CSV File</h1>
         {csvData.length> 0 && <div>
-          <Button variant="contained" color="primary" onClick={()=>setSummary(prev=>!prev)}>Show Summary</Button>
+          <Button variant="contained" color="primary" onClick={()=>setSummary(prev=>!prev)}>Toogle Show Summary</Button>
         </div>}
         <div className="pt-2 w-full flex justify-center items-center">
           <CSVReader setCSVRawData={setCSVRawData} />

@@ -24,7 +24,6 @@ function Summary({csvData = []}) {
   useEffect(() => {
       if(csvData.length>0 && (paginateSentiment< Number(process.env.REACT_APP_MAX_NUMBER_FETCH))) {
         const sliceSentiment = csvData.slice(0, paginateSentiment+2)
-        console.log("sliceSentiment", sliceSentiment)
         setChunksSentiment(sliceSentiment)
       }
   }, [paginateSentiment, csvData]);
@@ -33,7 +32,6 @@ function Summary({csvData = []}) {
     useEffect(() => {
       if(csvData.length>0 && (paginateEmotion< Number(process.env.REACT_APP_MAX_NUMBER_FETCH))) {
         const sliceEmotion = csvData.slice(0, paginateEmotion+2)
-        console.log("sliceEmotion", sliceEmotion)
         setChunksEmotion(sliceEmotion)
       }
   }, [paginateEmotion, csvData]);
@@ -74,25 +72,25 @@ function Summary({csvData = []}) {
 
 
     useEffect(() => {
-      if(dataGraphSentiment?.length >= Number(MAXDATAFETCH) && allSentimentFinished && resultSentiment?.length === 0) {
+      if(dataGraphSentiment?.length >= Number(MAXDATAFETCH) && resultSentiment?.length === 0 && allSentimentFinished) {
         // Get the array with the structure for the graphic and average
         const resultArraySentiment = averageScores(dataGraphSentiment.map(data=>data?.data))
         setResultSentiment(resultArraySentiment)
       } 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [allSentimentFinished, resultSentiment])
+    }, [ resultSentiment, dataGraphSentiment ])
 
 
     
     useEffect(() => {
-      if(dataGraphEmotion?.length >= Number(MAXDATAFETCH) && allEmotionFinished && resultEmotion?.length === 0) {
+      if(dataGraphEmotion?.length >= Number(MAXDATAFETCH) &&  resultEmotion?.length === 0 && allEmotionFinished) {
         // Get the array with the structure for the graphic and average
         const resultArrayEmotion = averageEmotion(dataGraphEmotion.map(data=>data?.data))
         setResultEmotion(resultArrayEmotion)
       } 
-    }, [allEmotionFinished, resultEmotion])
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [ resultEmotion, dataGraphEmotion])
 
-    
   return (
     <>
         <div className='mt-2'>
@@ -130,9 +128,9 @@ function Summary({csvData = []}) {
           )}
 
         {/* <!-- Card 2 --> */}
-        <div class="w-full sm:w-1/2 p-4  min-h-50">
+        <div className="w-full sm:w-1/2 p-4  min-h-50">
           {/* <!-- Card content goes here --> */}
-          <div class="bg-white rounded-lg shadow-md p-6 min-h-5 w-full">
+          <div className="bg-white rounded-lg shadow-md p-6 min-h-5 w-full">
             {/* <!-- Card content --> */}
             {resultEmotion?.length> 0?   
             <>
@@ -141,12 +139,12 @@ function Summary({csvData = []}) {
 
             </>        
             :   
-            <div class="w-full min-h-[200px]">
-              <div class="bg-gray-200 animate-pulse rounded-lg shadow-md p-6 min-h-[200px]">
-              <div class="h-4 w-1/2 bg-gray-300 rounded"><Typography>Loadind Data</Typography></div>
-              <div class="h-4 w-3/4 mb-4 bg-gray-300 rounded"></div>
-                <div class="h-4 w-3/4 mb-4 bg-gray-300 rounded"></div>
-                <div class="h-4 w-1/2 bg-gray-300 rounded"></div>
+            <div className="w-full min-h-[200px]">
+              <div className="bg-gray-200 animate-pulse rounded-lg shadow-md p-6 min-h-[200px]">
+              <div className="h-4 w-1/2 bg-gray-300 rounded"><Typography>Loadind Data</Typography></div>
+              <div className="h-4 w-3/4 mb-4 bg-gray-300 rounded"></div>
+                <div className="h-4 w-3/4 mb-4 bg-gray-300 rounded"></div>
+                <div className="h-4 w-1/2 bg-gray-300 rounded"></div>
               </div>
             </div>}
           </div>
