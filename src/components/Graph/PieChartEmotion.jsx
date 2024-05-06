@@ -14,14 +14,13 @@ const PieChartEmotion = ({data}) => {
     }, [data])
     const labels = Object.keys(dataForChart) || []
     
-
   return (
     <Pie
     data={{
         labels,
         datasets:[{
             label:`Graph for Emotion`,
-            backgroundColor:['#3366cc', '#990099', '#109618', '#dc3912', '#ff9900'],
+            backgroundColor:['#3366cc', '#990099', '#109618', '#dc3912', '#ff9900','#3366cc', '#990099', '#109618', '#dc3912', '#ff9900' ],
             data : labels.map(key => Number(dataForChart[key]).toFixed(2)*100)
         }
         ],
