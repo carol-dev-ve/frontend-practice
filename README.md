@@ -10,6 +10,9 @@ Once logged in, there is a page where you can upload a CSV file. It should have 
 
 ![Image](public/assets/imageReadme.png)
 
+It should be set the envs as the env.template. Please take into account that the env REACT_APP_MAX_NUMBER_FETCH is set to pass the limit for the free huggi api 
+
+
 
 ## Available Scripts
 
